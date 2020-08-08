@@ -58,3 +58,19 @@ seq(문자열, 튜플, 리스트, range) 또는 set에서 k개의 unique한 elem
 >>> random.sample([1, 2, 3, 4, 5], 3)
 [3, 5, 4]
 ```
+
+# random.seed(a=None)
+난수 발생을 위한 시드를 설정
+시드가 같다면 동일한 난수를 생성함
+
+```
+>>> random.seed(5)
+>>> random.random()
+0.6229016948897019
+>>> random.random()
+0.7417869892607294
+>>> random.seed(5)
+0.6229016948897019
+>>> random.random()
+0.7417869892607294
+```
