@@ -4,4 +4,4 @@
 
 document.writeln()은 텍스트에 '\n'을 덧붙여 출력한다.
 
-또한 <pre>태그를 사용했을 때, document.writeln()을 사용하면 자동으로 줄바꿈이 일어난다.
+또한 \<pre\>태그를 사용했을 때, document.writeln()을 사용하면 자동으로 줄바꿈이 일어난다.
