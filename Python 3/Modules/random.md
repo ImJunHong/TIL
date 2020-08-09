@@ -96,6 +96,7 @@ random.random()
 ```
 ```python
 random.seed(5)
+random.random()
 ```
 ```bash
 0.6229016948897019
