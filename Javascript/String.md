@@ -6,12 +6,12 @@
   * idxA와 idxB 둘 중 하나가 string의 length보다 크면 string의 length로 대체
 
 * ### 차이점
-  ### String.substring()
-  * 음수이거나 NaN인 index는 0으로 대체
-  * idxA가 idxB보다 크면 서로 자리를 바꿈
   ### String.slice()
   * idxA가 idxB보다 크면 empty string 반환
   * idxA가 음수면 idxB도 음수여야 한다. 그렇지 않으면 empty string 반환
+  ### String.substring()
+  * 음수이거나 NaN인 index는 0으로 대체
+  * idxA가 idxB보다 크면 서로 자리를 바꿈
 
 ```javascript
 var str = "0123456789"
