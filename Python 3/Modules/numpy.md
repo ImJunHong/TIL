@@ -1,5 +1,5 @@
 # numpy.array(lst)
-입력받은 리스트를 ndarray(다차원 배열) 형태로 바꿈
+입력받은 리스트를 ndarray(다차원 배열) 형태로 바꾸어 반환
 
 ```python
 lst = [1, 2, 3, 4, 5]
@@ -10,10 +10,9 @@ print(arr)
 [1 2 3 4 5]
 ```
 
-# numpy.arange([start,] stop, [step,] dtype=None)
+# numpy.arange([start,] stop, [step])
 * start부터 stop바로 앞까지 step만큼 일정하게 떨어져 있는 숫자들을 배열로 반환
 * start가 없으면 0을 기본값으로, step이 없으면 1을 기본값으로 갖음
-* dtype은 배열의 자료형을 명시적으로 지정할 때 사용
 
 ```python
 print(numpy.arange(1, 6, 2))
@@ -24,4 +23,60 @@ print(numpy.arange(6))
 [1 3 5]
 [1 2 3 4 5]
 [0 1 2 3 4 5]
+```
+
+# numpy.zeros(shape)/ones(shape)
+* shape(정수 또는 정수로 구성된 튜플) 모양의 ndarray 반환
+* zeros()는 모든 값이 0인 배열 생성, ones()는 모든 값이 1인 배열 반환
+
+```python
+print(numpy.zeros((2,3)))
+print(numpy.ones((2,3)))
+print(numpy.zeros(3))
+print(numpy.ones((3,)))
+print(numpy.zeros((2, 3, 4)))
+```
+```bash
+[[0. 0. 0.] 
+ [0. 0. 0.]]
+[[1. 1. 1.] 
+ [1. 1. 1.]]
+[0. 0. 0.]
+[1. 1. 1.]
+[[[0. 0. 0. 0.]
+  [0. 0. 0. 0.]
+  [0. 0. 0. 0.]]
+
+ [[0. 0. 0. 0.]
+  [0. 0. 0. 0.]
+  [0. 0. 0. 0.]]]
+```
+
+# numpy.empty(shape)
+초기화되지 않은 값으로 shape 모양의 ndarray 반환
+
+```python
+print(numpy.empty((2,3)))
+```
+```bash
+[[ 4.64583300e-308  4.66664552e-308 -2.57703408e+010]
+ [-4.70231646e-064  2.26262303e-319  0.00000000e+000]] # 가비지 값으로 채워진 배열 반환
+```
+
+# numpy.zeros_like(arr)/ones_like(arr)/empty_like(arr)
+arr의 shape 크기만큼 지정된 값으로 채운 배열 반환
+
+```python
+arr = numpy.array([[2, 3], [4, 5]])
+print(numpy.zeros_like(arr))
+print(numpy.ones_like(arr))
+print(numpy.empty_like(arr))
+```
+```bash
+[[0 0]
+ [0 0]]
+[[1 1]
+ [1 1]]
+[[0 0]
+ [0 0]]
 ```
