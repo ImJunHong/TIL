@@ -4,6 +4,7 @@
 ```python
 lst = [1, 2, 3, 4, 5]
 arr = numpy.array(lst)
+
 print(arr)
 ```
 ```bash
@@ -68,6 +69,7 @@ arr의 shape 크기만큼 지정된 값으로 채운 배열 반환
 
 ```python
 arr = numpy.array([[2, 3], [4, 5]])
+
 print(numpy.zeros_like(arr))
 print(numpy.ones_like(arr))
 print(numpy.empty_like(arr))
@@ -87,6 +89,7 @@ print(numpy.empty_like(arr))
 
 ```python
 arr = numpy.array([[1, 2, 3], [9, 8, 7], [4, 6, 5]])
+
 print(arr)
 print(numpy.argmax(arr))
 print(numpy.argmin(arr))
@@ -113,6 +116,7 @@ print(numpy.argmin(arr,axis=1))
 
 ```python
 arr = numpy.array([[1, 2, 3], [4, 5, 6]])
+
 print(numpy.where(arr > 2, 0, 1))
 print(numpy.where(arr > 2))
 ```
