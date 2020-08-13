@@ -10,7 +10,7 @@ print(arr)
 [1 2 3 4 5]
 ```
 
-# numpy.arange([start,] stop, [step])
+# numpy.arange([start,] stop [,step])
 * start부터 stop바로 앞까지 step만큼 일정하게 떨어져 있는 숫자들을 배열로 반환
 * start가 없으면 0을 기본값으로, step이 없으면 1을 기본값으로 갖음
 
@@ -79,4 +79,45 @@ print(numpy.empty_like(arr))
  [1 1]]
 [[0 0]
  [0 0]]
+```
+
+# numpy.argmax(arr[,axis])/argmin(arr[,axis])
+* 최댓값과 최솟값의 index를 반환
+* axis가 0이면 열, 1이면 행을 기준으로 최댓값과 최솟값의 index값으로 된 배열 반환
+
+```python
+arr = numpy.array([[1, 2, 3], [9, 8, 7], [4, 6, 5]])
+print(arr)
+print(numpy.argmax(arr))
+print(numpy.argmin(arr))
+print(numpy.argmax(arr,axis=0))
+print(numpy.argmax(arr,axis=1))
+print(numpy.argmin(arr,axis=0))
+print(numpy.argmin(arr,axis=1))
+```
+```bash
+[[1 2 3]
+ [9 8 7]
+ [4 6 5]]
+3
+0
+[1 1 1]
+[2 0 1]
+[0 0 0]
+[0 2 0]
+```
+
+# numpy.where(condition [,x,y])
+* 배열의 각 요소를 condition과 비교하여 True면 x로, False면 y로 바꾼 배열을 반환
+* condition만 인자로 받으면 condition을 만족하는 값의 index를 반환
+
+```python
+arr = numpy.array([[1, 2, 3], [4, 5, 6]])
+print(numpy.where(arr > 2, 0, 1))
+print(numpy.where(arr > 2))
+```
+```bash
+[[1 1 0]
+ [0 0 0]]
+(array([0, 1, 1, 1], dtype=int64), array([2, 0, 1, 2], dtype=int64))
 ```
