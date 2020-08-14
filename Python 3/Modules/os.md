@@ -46,6 +46,7 @@ FileNotFoundError: [WinError 3] 지정된 경로를 찾을 수 없습니다: './
 
 # os.remove(path)
 * path(파일)를 삭제
+* 폴더와 그 안의 파일을 동시에 모두 삭제하려면 [shutil 모듈](https://github.com/ImJunHong/TIL/blob/master/Python%203/Modules/shutil.md#shutilrmtreepath) 사용
 
 # os.path.isdir(path)
 path(폴더)가 존재하는지 확인하여 Boolean 반환
@@ -67,7 +68,7 @@ print(os.path.isfile('./A/a.txt'))
 False
 ```
 
-# os.path.join(path, *paths)
+# os.path.join(path, \*paths)
 path들을 병합한 새 경로 반환
 
 ```python
