@@ -15,6 +15,7 @@
 <head>
   <link href="mystyle.css" type="text/css" rel="stylesheet">
 </head>
+```
 * type="text/css"는 불러오는 파일이 CSS 언어로 작성된 텍스트 파일임을 알려줌
 * rel="stylesheet"는 불러오는 파일이 스타일 시트임을 알려줌
 * 종료 태그(</link>)가 없음
