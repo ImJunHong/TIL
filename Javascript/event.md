@@ -31,3 +31,15 @@ window.onload = load;
   * listener : 이벤트 리스너로 등록할 함수 이름
   * useCapture : true면 캡처링 방식으로, false면 버블링 방식으로 이벤트 전파. 기본값은 false
   * 동일한 이벤트에 대해 여러 개의 리스너를 중복 등록할 수 있
+```javascript
+text = document.getElementById("text");
+text.addEventListener("click", func1);
+text.addEventListener("click", func2);
+
+function func1() {
+    text.style.backgroundColor = "yellow";
+}
+function func2() {
+    text.style.fontSize = "20px";
+}
+```
