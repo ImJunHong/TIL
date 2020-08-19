@@ -32,6 +32,7 @@ window.onload = load;
   * listener : 이벤트 리스너로 등록할 함수 이름
   * useCapture : true면 캡처링 방식으로, false면 버블링 방식으로 이벤트 전파. 기본값은 false
   * 동일한 이벤트에 대해 여러 개의 리스너를 중복 등록할 수 있음
+  * 표준 브라우저(IE9 이상, 파이어폭스, 오페라, 사파리, 크롬)에서 지원
  
 ```javascript
 text = document.getElementById("text");
@@ -44,5 +45,20 @@ function func1() {
 
 function func2() {
     text.style.fontSize = "20px";
+}
+```
+
+## 4. DOM 객체의 attachEvent() 메소드를 이용하여 등록
+* attachEvent(eventName, listener)
+    * eventName : 이벤트 타입을 문자열로 전달. addEventListener()와 달리 이벤트 타입 앞에 on을 붙여야 함
+    * listener : 이벤트 리스너로 등록할 함수 이름
+    * IE8 이하, 오페라 등의 브라우저에서 지원
+    
+```javacsript
+text = document.getElementById("text");
+text.attachEvent("onclick", func1);
+
+function func1() {
+    text.style.backgroundColor = "yellow";
 }
 ```
