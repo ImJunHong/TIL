@@ -125,3 +125,48 @@ print(numpy.where(arr > 2))
  [0 0 0]]
 (array([0, 1, 1, 1], dtype=int64), array([2, 0, 1, 2], dtype=int64))
 ```
+
+# numpy.reshape(arr, shape)
+* 배열을 기존의 데이터를 유지한 채 모양을 shape형태로 바꿈
+
+```python
+arr = numpy.array([[1, 2, 3], [4, 5, 6]])
+new_arr = numpy.reshape(arr, (3, 2))
+print(new_arr)
+```
+```bash
+[[1 2]
+ [3 4]
+ [5 6]]
+```
+
+* shape 내에 -1을 쓰면, 크기에 맞게 자동으로 값을 지정함
+* -1에 들어갈 값으로 전체 크기를 나눌 수 없으면 오류 발생
+
+```python
+arr = numpy.array([[1, 2, 3], [4, 5, 6]])
+new_arr1 = numpy.reshape(arr, (3, -1))
+print(new_arr1)
+new_arr2 = numpy.reshape(arr, (4, -1))
+print(new_arr2)
+```
+```bash
+[[1 2]
+ [3 4]
+ [5 6]]
+ValueError: cannot reshape array of size 6 into shape (4,newaxis)
+```
+
+# numpy.dot(arr1, arr2)
+* arr1과 arr2의 행렬곱을 반환
+
+```python
+arr1 = numpy.array([[1, 2, 3], [4, 5, 6]])
+arr2 = numpy.array([[1, 2], [3, 4], [5, 6]])
+
+print(numpy.dot(arr1, arr2))
+```
+```bash
+[[22 28]
+ [49 64]]
+```
