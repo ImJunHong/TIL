@@ -13,5 +13,6 @@
 * HTML태그나 DOM 객체에서 window를 생략하고 open()만 호출하면 document.open()으로 처리됨
 
 ```javascript
+//myGit이라는 이름의 너비 600, 높이 400 픽셀, 크기 변경 가능하고 툴바가 없는 윈도우를 새로 열어 깃허브 웹 페이지 출력
 window.open("https://github.com/ImJunHong", "myGit", "width=600,height=400,resizable=1,toolbar=no");
 ```
