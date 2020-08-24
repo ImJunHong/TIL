@@ -22,3 +22,7 @@
 * 병렬방식으로 다운로드하여 로딩 속도가 비교적 빠름
 * 여러 개의 link를 사용해도 IE에서 동일한 순서로 작동함
 * Edge에서도 처리가 가능한 방식임
+
+# display:none과 visibility:hidden의 차이
+* 둘 다 해당 스타일을 가진 태그를 보이지 않게 함
+* display:none은 공간을 할당하지 않으나, visibility:hidden은 공간을 할당함
