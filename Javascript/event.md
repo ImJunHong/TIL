@@ -62,3 +62,34 @@ function func1() {
     text.style.backgroundColor = "yellow";
 }
 ```
+
+# 이벤트 객체 전달받기
+* 이벤트 객체는 이벤트 리스너 함수(이벤트 핸들러)의 첫 번째 매개변수로 전달
+* 이벤트 리스너 함수 선언시 이벤트 객체를 전달받을 첫 번째 매개변수를 명시적으로 선언하여야 함(예시의 e 대신 다른 이름 가능)
+* HTML 태그에서 이벤트 리스너를 만들 때는 이벤트 객체를 반드시 `event`라는 이름으로 전달해야 한다.
+
+```javascript
+var button = document.getElementById("button");
+button.onclick = change;
+
+function change(e) {
+    e.target.style.backgroundColor = "yellow";
+}
+```
+```javascript
+// 익명 함수일 때
+var button = document.getElementById("button");
+button.onclick = function(e) {
+    e.target.style.backgroundColor = "yellow";
+}
+```
+```html
+<!--HTML 태그에 이벤트 리스너를 만들 때-->
+<button onclick="change(event)">색 변경</button>
+<script>
+function change(e) {
+    e.target.style.backgroundColor = "yellow";
+}  
+</script>
+```
+* HTML 태그에 직접 이벤트 리스너를 연결하는 것은 유지보수에 좋지 않아 권장되지 않음(HTML과 javascript는 분리할 것!)
