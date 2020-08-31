@@ -54,7 +54,7 @@ function func2() {
     * listener : 이벤트 리스너로 등록할 함수 이름
     * IE8 이하, 오페라 등의 브라우저에서 지원
     
-```javacsript
+```javascript
 const text = document.getElementById("text");
 text.attachEvent("onclick", func1);
 
