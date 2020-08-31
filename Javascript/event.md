@@ -14,13 +14,13 @@
 
 ```javascript
 window.onload = function() {
-    var text = document.getElementById("text");
+    const text = document.getElementById("text");
     text.style.backgroundColor = "yellow";
 }
 ```
 ```javascript
 function load() {
-    var text = document.getElementById("text");
+    const text = document.getElementById("text");
     text.style.backgroundColor = "yellow";
 }
 window.onload = load;
@@ -35,7 +35,7 @@ window.onload = load;
   * 표준 브라우저(IE9 이상, 파이어폭스, 오페라, 사파리, 크롬)에서 지원
  
 ```javascript
-text = document.getElementById("text");
+const text = document.getElementById("text");
 text.addEventListener("click", func1);
 text.addEventListener("click", func2);
 
@@ -55,7 +55,7 @@ function func2() {
     * IE8 이하, 오페라 등의 브라우저에서 지원
     
 ```javacsript
-text = document.getElementById("text");
+const text = document.getElementById("text");
 text.attachEvent("onclick", func1);
 
 function func1() {
@@ -69,7 +69,7 @@ function func1() {
 * HTML 태그에서 이벤트 리스너를 만들 때는 이벤트 객체를 반드시 `event`라는 이름으로 전달해야 한다.
 
 ```javascript
-var button = document.getElementById("button");
+const button = document.getElementById("button");
 button.onclick = change;
 
 function change(e) {
@@ -78,7 +78,7 @@ function change(e) {
 ```
 ```javascript
 // 익명 함수일 때
-var button = document.getElementById("button");
+const button = document.getElementById("button");
 button.onclick = function(e) {
     e.target.style.backgroundColor = "yellow";
 }
