@@ -14,24 +14,24 @@
   * idxA가 idxB보다 크면 서로 자리를 바꿈
 
 ```javascript
-var str = "0123456789"
+const str = "0123456789"
 
-var slice1 = str.slice(3,5);
-var sub1 = str.substring(3,5);
-var slice2 = str.slice(3,-5);
-var sub2 = str.substring(3,-5);
-var slice3 = str.slice(-3,5);
-var sub3 = str.substring(-3,5);
-var slice4 = str.slice(-5);
-var sub4 = str.substring(-5);
+const slice1 = str.slice(3,5);
+const sub1 = str.substring(3,5);
+const slice2 = str.slice(3,-5);
+const sub2 = str.substring(3,-5);
+const slice3 = str.slice(-3,5);
+const sub3 = str.substring(-3,5);
+const slice4 = str.slice(-5);
+const sub4 = str.substring(-5);
 
-console.log("str.slice(3,5) : " + slice1;
+console.log("str.slice(3,5) : " + slice1);
 console.log("str.substring(3,5) : " + sub1);
 console.log("str.slice(3,-5) : " + slice2);
 console.log("str.substring(3,-5) : " + sub2);
-console.log("str.slice(-3,5) : " + slice3;
+console.log("str.slice(-3,5) : " + slice3);
 console.log("str.substring(-3,5) : " + sub3);
-console.log("str.slice(-5) : " + slice4;
+console.log("str.slice(-5) : " + slice4);
 console.log("str.substring(-5) : " + sub4);
 ```
 ```bash
