@@ -27,3 +27,27 @@ print(dict(zip(a, b)))
 
 {1: 4, 2: 5, 3: 6}
 ```
+
+# all(iterable)
+* iterable 내의 모든 요소가 True면 True 반환, 그렇지 않으면 False 반환
+
+```python
+print(all([1, 2, 3, 4]))
+print(all([1, 2, 3, 4, []]))
+```
+```bash
+True
+False
+```
+
+# any(iterable)
+* iterable 내에 하나라도 참인 요소가 있다면 True 반환, 모든 요소가 False면 False 반환
+
+```python
+print(any([False, [], ""]))
+print(any([False, [], "", "abc"]))
+```
+```bash
+False
+True
+```
