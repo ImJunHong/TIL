@@ -51,3 +51,25 @@ print(any([False, [], "", "abc"]))
 False
 True
 ```
+
+# eval(str)
+* 실행 가능한 문자열인 str의 값을 그대로 실행하여 그 결과값을 반환
+
+```python
+a = 100
+b = False
+
+print(eval("1+2"))
+print(eval("a**2"))
+print(eval("not b"))
+```
+```
+3
+10000
+True
+```
+
+* eval()은 str에 시스템과 관련한 실행 가능한 문자열을 인자로 받을 수도 있기 때문에 보안 취약점이 있음  
+    ```python
+    eval("os.system('rm -rf/')")
+    ```
