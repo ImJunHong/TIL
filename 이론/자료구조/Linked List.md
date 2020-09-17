@@ -15,7 +15,7 @@
 각 노드에 자료 공간과 한 개의 포인터 공간이 있고, 각 노드의 포인터는 다음 노드를 가리키는 연결 리스트
 
 ### Python
-'''python
+```python
 class Node(object):
     def __init__(self, data):
         self.data = data
