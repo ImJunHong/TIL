@@ -13,3 +13,102 @@
 
 ## 단일 연결 리스트(Singly Linked List)
 각 노드에 자료 공간과 한 개의 포인터 공간이 있고, 각 노드의 포인터는 다음 노드를 가리키는 연결 리스트
+
+### Python
+'''python
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.pointer = None
+
+class SinglyLinkedList(object):
+    def __init__(self):
+        self.head = None
+        self.length = 0
+
+    def add(self, node):
+        if self.head == None: # 첫 번째 노드 삽입
+            self.head = node
+        else:
+            current_node = self.head
+            while current_node.pointer != None: # 중간에 삽입하는 경우
+                current_node = current_node.pointer
+            current_node.pointer = node
+    
+    def get_index(self, data):
+        current_node = self.head
+        index = 0
+        while current_node:
+            if current_node.data == data:
+                return index
+            current_node = current_node.pointer
+            index += 1
+        return -1
+
+    def insert_node_index(self, index, node):
+        current_node = self.head
+        previous_node = None
+        current_index = 0
+
+        if index == 0: # 리스트의 맨 앞에 노드 삽입
+            if self.head: # 리스트가 비어 있지 않을 때
+                next_node = self.head
+                self.head = node
+                self.head.pointer = next_node
+            else: # 리스트가 비어 있을 때
+                self.head = node
+        else: # 리스트의 중간 또는 맨 마지막에 노드 삽입
+            while current_index < index:
+                if current_node:
+                    previous_node = current_node
+                    current_node = current_node.pointer
+                else:
+                    break
+                current_index += 1
+            if current_index == index:
+                node.pointer = current_node
+                previous_node.point = node
+            else:
+                return -1
+        
+    def insert_node_data(self, data, node):
+        index = self.get_index(data)
+        if index >= 0:
+            self.insert_node_index(index, node)
+        else:
+            return -1
+
+    def delete_node(self, index):
+        current_index = 0
+        current_node = self.head
+        previous_node = None
+        next_node = self.head.pointer
+        if index == 0:
+            self.head = next_node
+        else:
+            while current_index < index:
+                if current_node.pointer:
+                    previous_node = current_node
+                    current_node = next_node
+                    next_node = next_node.pointer
+                else:
+                    break
+                current_index += 1
+            if current_index == index:
+                previous_node.pointer = next_node
+            else:
+                return -1
+    
+    def clear(self):
+        self.head = None
+
+    def print_list(self):
+        current_node = self.head
+        string = ""
+        while current_node:
+            string += str(current_node.data)
+            if current_node.pointer:
+                string += " "
+            current_node = current_node.pointer
+        print(string)
+```
