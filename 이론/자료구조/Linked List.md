@@ -27,75 +27,83 @@ class SinglyLinkedList(object):
         self.length = 0
 
     def add(self, node):
+        self.length += 1
         if self.head == None: # 첫 번째 노드 삽입
             self.head = node
         else:
-            current_node = self.head
-            while current_node.pointer != None: # 중간에 삽입하는 경우
-                current_node = current_node.pointer
-            current_node.pointer = node
+            curr = self.head
+            while curr.pointer != None: # 중간에 삽입하는 경우
+                curr = curr.pointer
+            curr.pointer = node
     
     def get_index(self, data):
-        current_node = self.head
+        curr = self.head
         index = 0
-        while current_node:
-            if current_node.data == data:
+        while curr:
+            if curr.data == data:
                 return index
-            current_node = current_node.pointer
+            curr = curr.pointer
             index += 1
         return -1
 
-    def insert_node_index(self, index, node):
-        current_node = self.head
-        previous_node = None
-        current_index = 0
-
-        if index == 0: # 리스트의 맨 앞에 노드 삽입
-            if self.head: # 리스트가 비어 있지 않을 때
-                next_node = self.head
-                self.head = node
-                self.head.pointer = next_node
-            else: # 리스트가 비어 있을 때
-                self.head = node
-        else: # 리스트의 중간 또는 맨 마지막에 노드 삽입
-            while current_index < index:
-                if current_node:
-                    previous_node = current_node
-                    current_node = current_node.pointer
-                else:
-                    break
-                current_index += 1
-            if current_index == index:
-                node.pointer = current_node
-                previous_node.point = node
+    def get_data(self, index):
+        curr = self.head
+        curr_index = 0
+        while curr_index < index:
+            if curr.pointer:
+                curr = curr.pointer
+                curr_index += 1
             else:
-                return -1
-        
-    def insert_node_data(self, data, node):
-        index = self.get_index(data)
-        if index >= 0:
-            self.insert_node_index(index, node)
+                break
+        if curr_index == index:
+            return curr.data
         else:
             return -1
 
-    def delete_node(self, index):
-        current_index = 0
-        current_node = self.head
-        previous_node = None
-        next_node = self.head.pointer
-        if index == 0:
-            self.head = next_node
-        else:
-            while current_index < index:
-                if current_node.pointer:
-                    previous_node = current_node
-                    current_node = next_node
-                    next_node = next_node.pointer
+    def insert_node(self, index, node):
+        curr = self.head
+        prev = None
+        curr_index = 0
+
+        if index == 0: # 리스트의 맨 앞에 노드 삽입
+            if self.head: # 리스트가 비어 있지 않을 때
+                nxt = self.head
+                self.head = node
+                self.head.pointer = nxt
+            else: # 리스트가 비어 있을 때
+                self.head = node
+        else: # 리스트의 중간 또는 맨 마지막에 노드 삽입
+            while curr_index < index:
+                if curr:
+                    prev = curr
+                    curr = curr.pointer
                 else:
                     break
-                current_index += 1
-            if current_index == index:
-                previous_node.pointer = next_node
+                curr_index += 1
+            if curr_index == index:
+                node.pointer = curr
+                prev.pointer = node
+            else:
+                return -1
+
+    def delete_node_by_index(self, index):
+        curr_index = 0
+        curr = self.head
+        prev = None
+        nxt = self.head.pointer
+        if index == 0:
+            self.head = nxt
+        else:
+            while curr_index < index:
+                if curr.pointer:
+                    prev = curr
+                    curr = nxt
+                    nxt = nxt.pointer
+                else:
+                    break
+                curr_index += 1
+            if curr_index == index:
+                prev.pointer = nxt
             else:
                 return -1
     
@@ -103,12 +111,20 @@ class SinglyLinkedList(object):
         self.head = None
 
     def print_list(self):
-        current_node = self.head
-        string = ""
-        while current_node:
-            string += str(current_node.data)
-            if current_node.pointer:
-                string += " "
-            current_node = current_node.pointer
-        print(string)
+        curr = self.head
+        while curr:
+            print(curr.data, end=" ")
+            curr = curr.pointer
+        print()
+
+ll = SinglyLinkedList()
+ll.add(Node(1))
+ll.add(Node(2))
+ll.add(Node(3))
+ll.add(Node(4))
+ll.add(Node(6))
+ll.insert_node(4, Node(5))
+ll.print_list() # 1 2 3 4 5 6
+print(ll.get_index(6)) # 5
+print(ll.get_data(3)) # 4
 ```
