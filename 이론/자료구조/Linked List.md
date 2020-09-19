@@ -30,9 +30,9 @@ class SinglyLinkedList(object):
         self.length += 1
         if self.head == None: # 첫 번째 노드 삽입
             self.head = node
-        else:
+        else: # 중간 또는 마지막에 삽입하는 경우
             curr = self.head
-            while curr.pointer != None: # 중간에 삽입하는 경우
+            while curr.pointer != None:
                 curr = curr.pointer
             curr.pointer = node
     
@@ -59,7 +59,7 @@ class SinglyLinkedList(object):
             return curr.data
         else:
             return -1
-
+            
     def insert_node(self, index, node):
         curr = self.head
         prev = None
@@ -84,16 +84,16 @@ class SinglyLinkedList(object):
                 node.pointer = curr
                 prev.pointer = node
             else:
-                return -1
+                print(f"인덱스 {index}에 노드를 삽입할 수 없습니다.")
 
     def delete_node_by_index(self, index):
         curr_index = 0
         curr = self.head
         prev = None
         nxt = self.head.pointer
-        if index == 0:
+        if index == 0: # 첫 번째 노드 삭제
             self.head = nxt
-        else:
+        else: # 중간 또는 마지막 노드 삭제
             while curr_index < index:
                 if curr.pointer:
                     prev = curr
@@ -105,8 +105,15 @@ class SinglyLinkedList(object):
             if curr_index == index:
                 prev.pointer = nxt
             else:
-                return -1
-    
+                print(f"인덱스 {index}에 해당하는 노드가 없습니다.")
+
+    def delete_node_by_data(self, data):
+        index = self.get_index(data)
+        if index == -1:
+            print(f"{data}을(를) 데이터로 가진 노드가 없습니다.")
+        else:
+            self.delete_node_by_index(index)
+
     def clear(self):
         self.head = None
 
@@ -123,8 +130,17 @@ ll.add(Node(2))
 ll.add(Node(3))
 ll.add(Node(4))
 ll.add(Node(6))
+ll.print_list() # 1 2 3 4 6
+print(ll.get_data(4)) # 6
+print(ll.get_index(6)) # 4
 ll.insert_node(4, Node(5))
 ll.print_list() # 1 2 3 4 5 6
-print(ll.get_index(6)) # 5
-print(ll.get_data(3)) # 4
+ll.delete_node_by_index(5)
+ll.print_list() # 1 2 3 4 5
+ll.delete_node_by_index(8) # 인덱스 8에 해당하는 노드가 없습니다.
+ll.print_list() # 1 2 3 4 5
+ll.delete_node_by_data(1)
+ll.print_list() # 2 3 4 5
+ll.delete_node_by_data(8) # 8을(를) 데이터로 가진 노드가 없습니다.
+ll.print_list() # 2 3 4 5
 ```
