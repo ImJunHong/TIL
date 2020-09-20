@@ -7,3 +7,7 @@
 a = 50
 assert a > 100, "100보다 크지 않음" # AssertionError: 100보다 크지 않음
 ```
+
+# raise문과의 차이점
+* raise문은 이미 오류를 발견한 상황에서 지정한 exception을 항상 발생시킴
+* assert문은 상태를 검증하기 위한 명령으로, 검증식이 거짓일 때만 AssertionError를 발생시킴
