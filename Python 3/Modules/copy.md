@@ -1,9 +1,6 @@
 # copy.copy(x)
 x의 얕은 사본을 반환
 
-# copy.deepcopy(x)
-x의 깊은 사본을 반환
-
 ```python
 a = [1, 2, 3, [4, 5]]
 b = copy.copy(a)
@@ -16,15 +13,19 @@ b[3][1] = 6 # b[3]은 mutable한 요소(list)
 print(a) # [1, 2, 3, [4, 6]]
 print(b) # [0, 2, 3, [4, 6]]
 ```
+
+# copy.deepcopy(x)
+x의 깊은 사본을 반환
+
 ```python
 a = [1, 2, 3, [4, 5]]
 b = copy.deepcopy(a)
 
-b[0] = 0
+b[0] = 0 # b[0]은 immutable한 요소(int)
 print(a) # [1, 2, 3, [4, 5]]
 print(b) # [0, 2, 3, [4, 5]]
 
-b[3][1] = 6
+b[3][1] = 6 # b[3]은 mutable한 요소(list)
 print(a)# [1, 2, 3, [4, 5]]
 print(b)# [0, 2, 3, [4, 6]]
 ```
