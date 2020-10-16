@@ -8,7 +8,7 @@
 for i in sys.stdin.readline():
     print(i)
 ```
-```bash
+```
 abc
 a
 b
