@@ -20,7 +20,7 @@ c
 for i in sys.stdin.readline(3):
     print(i)
 ```
-```bash
+```
 abcde
 a
 b
