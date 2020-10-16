@@ -12,7 +12,7 @@ for i in sys.stdin.readline():
 abc
 a
 b
-c
+c  
 
 ```
 
