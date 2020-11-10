@@ -30,7 +30,7 @@ class SinglyLinkedList(object):
         self.length += 1
         if self.head == None: # 첫 번째 노드 삽입
             self.head = node
-        else: # 중간 또는 마지막에 삽입하는 경우
+        else:
             curr = self.head
             while curr.pointer != None:
                 curr = curr.pointer
