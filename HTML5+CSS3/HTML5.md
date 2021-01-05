@@ -8,4 +8,4 @@
 
 # \<input type="submit"\>과 \<button\>\</button\> 비교
 * button 태그의 디폴트 type은 submit임. type 속성을 명시하지 않으면 submit 기능을 수행함
-* button은 input과는 달리 \<button\>\</button\> 사이에 컨텐츠를 삽입하는 등 UI 디자인에서의 활용도가 높음
+* button은 input과는 달리 \<button\>\</button\> 사이에 컨텐츠를 삽입할 수 있는 등 UI 디자인에서의 활용도가 높음
