@@ -12,7 +12,7 @@
 * JDK 1.8부터 default메소드와 static 메소드를 선언할 수 있으며, 접근 제어자가 public이어야 함(생략 가능)
 * JDK 1.9부터 private 메소드를 선언할 수 있으며, 인터페이스 내의 다른 메소드에서만 호출 가능함
 * JDK 1.9부터 static 메소드의 접근 지정자로 private을 사용할 수 있음
-* default, private, static 메소드는 반드시 구현부를 작성해야 
+* default, private, static 메소드는 반드시 구현부를 작성해야 함
 
 # 지역 클래스에서 지역변수에 접근하기
 * 지역 클래스가 포함된 메서드에 정의된 지역변수 중 final이 붙은 지역변수만 접근이 가능함
