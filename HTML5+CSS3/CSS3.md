@@ -1,3 +1,50 @@
+# float를 clear시키는 방법
+* float 속성이 있는 블록 요소는 주변의 다른 요소들의 배치에 영향을 미침
+* clear 속성은 float 속성이 다른 요소들의 배치에 영향을 미치지 않도록 해제시키는 역할을 함
+```html
+<body>
+  <div id="clearfix">
+    <div>div div 1</div>
+    <div>div div 2</div>
+  </div>
+  <div id="yellow">div 3</div>
+</body>
+```
+## 1. float를 clear시키지 않았을 때
+```css
+<style>
+  #yellow {
+    background-color : pink;
+  }
+  div div {
+    background-color : red;
+    float : left;
+  }
+</style>
+```
+<img src="https://user-images.githubusercontent.com/67459853/104121305-7348c400-5380-11eb-998a-9a53c14353fb.PNG">
+
+## 2. float를 clear시켰을 때
+```css
+<style>
+  #yellow {
+    background-color : pink;
+  }
+  div div {
+    background-color : red;
+    float : left;
+  }
+  #clearfix::after {
+    display : block;
+    content : "";
+    clear : both;
+  }
+</style>
+```
+<img src="https://user-images.githubusercontent.com/67459853/104121307-7479f100-5380-11eb-81f2-fa833eae716c.PNG">
+- ::after는 가상 요소(Pseudo-Element)로 해당 요소의 맨 마지막 자식으로 의사(pseudo) 요소를 생성함
+- 위의 코드에서는 부모 요소인 clearfix 뒤에 보이지 않는 의사 요소를 만들어 뒤에 있는 요소가 위로 따라 올라가지 않도록 함
+
 # @import와 link의 차이
 ## @import
 ```css
