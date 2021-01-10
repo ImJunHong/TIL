@@ -7,12 +7,12 @@
     <div>div div 1</div>
     <div>div div 2</div>
   </div>
-  <div id="yellow">div 3</div>
+  <div id="clear">div 3</div>
 </body>
 ```
 ## 1. float를 clear시키지 않았을 때
 ```css
-#yellow {
+#clear {
   background-color : pink;
 }
 div div {
@@ -24,7 +24,7 @@ div div {
 
 ## 2. float를 clear시켰을 때
 ```css
-#yellow {
+#clear {
   background-color : pink;
 }
 div div {
