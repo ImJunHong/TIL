@@ -12,34 +12,30 @@
 ```
 ## 1. float를 clear시키지 않았을 때
 ```css
-<style>
-  #yellow {
-    background-color : pink;
-  }
-  div div {
-    background-color : red;
-    float : left;
-  }
-</style>
+#yellow {
+  background-color : pink;
+}
+div div {
+  background-color : red;
+  float : left;
+}
 ```
 <img src="https://user-images.githubusercontent.com/67459853/104121305-7348c400-5380-11eb-998a-9a53c14353fb.PNG">
 
 ## 2. float를 clear시켰을 때
 ```css
-<style>
-  #yellow {
-    background-color : pink;
-  }
-  div div {
-    background-color : red;
-    float : left;
-  }
-  #clearfix::after {
-    display : block;
-    content : "";
-    clear : both;
-  }
-</style>
+#yellow {
+  background-color : pink;
+}
+div div {
+  background-color : red;
+  float : left;
+}
+#clearfix::after {
+  display : block;
+  content : "";
+  clear : both;
+}
 ```
 <img src="https://user-images.githubusercontent.com/67459853/104121307-7479f100-5380-11eb-81f2-fa833eae716c.PNG">
 
@@ -48,9 +44,7 @@
 # @import와 link의 차이
 ## @import
 ```css
-<style>
-  @import url(mystyle.css); /* @import url('mystyle.css'); 또는 @import "mystyle.css";도 가능 */
-</style>
+@import url(mystyle.css); /* @import url('mystyle.css'); 또는 @import "mystyle.css";도 가능 */
 ```
 * <style> 안에서만 사용되며, 그렇기 때문에 CSS 파일 내부에서도 @import를 사용할 수 있음
 * 직렬방식으로 다운로드하여 로딩 속도가 비교적 긺.
