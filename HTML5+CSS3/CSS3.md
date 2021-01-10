@@ -3,7 +3,7 @@
 * clear 속성은 float 속성이 다른 요소들의 배치에 영향을 미치지 않도록 해제시키는 역할을 함
 ```html
 <body>
-  <div id="clearfix">
+  <div id="container">
     <div>div div 1</div>
     <div>div div 2</div>
   </div>
@@ -31,7 +31,7 @@ div div {
   background-color : red;
   float : left;
 }
-#clearfix::after {
+#container::after {
   display : block;
   content : "";
   clear : both;
