@@ -42,8 +42,8 @@
 </style>
 ```
 <img src="https://user-images.githubusercontent.com/67459853/104121307-7479f100-5380-11eb-81f2-fa833eae716c.PNG">
-- ::after는 가상 요소(Pseudo-Element)로 해당 요소의 맨 마지막 자식으로 의사(pseudo) 요소를 생성함
-- 위의 코드에서는 부모 요소인 clearfix 뒤에 보이지 않는 의사 요소를 만들어 뒤에 있는 요소가 위로 따라 올라가지 않도록 함
+
+::after는 가상 요소(Pseudo-Element)로 해당 요소의 맨 마지막 자식으로 의사(pseudo) 요소를 생성한다. 위의 코드에서는 부모 요소인 clearfix 뒤에 보이지 않는 의사 요소를 만들어 뒤에 있는 요소가 위로 따라 올라가지 않도록 함
 
 # @import와 link의 차이
 ## @import
