@@ -22,7 +22,7 @@ const color01 = document.getElementById("elementId01").style.color; // black
 const color02 = document.getElementById("elementId02").style.color; // ""
 ```
 
-## window.getComputedStyle(Element);
+## window.getComputedStyle(Element)
 * Element에 적용된 모든 CSS 속성 값을 담고 있는 객체를 반환
 ```javascript
 const style = window.getComputedStyle(element);
