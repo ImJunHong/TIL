@@ -7,11 +7,11 @@ const color = element.style.color;
 ```
 * 새로운 style을 설정할 수 있음
 ```javascript
-element.style.color = red
+element.style.color = red;
 ```
 * HTML 태그 내에 인라인 방식으로 지정된 CSS 스타일에만 접근할 수 있음
 ```css
-#elementId02 {color : "red";}
+#elementId02 {color : red;}
 ```
 ```html
 <div id="elementId01" style="color:black"></div>
