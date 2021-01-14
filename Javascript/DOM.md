@@ -25,10 +25,9 @@ const color02 = document.getElementById("elementId02").style.color; // ""
 ## window.getComputedStyle(Element)
 * Element에 적용된 모든 CSS 속성 값을 담고 있는 객체를 반환
 ```javascript
-const style = window.getComputedStyle(element);
-const color = style.getPropertyValue("color");
+const color = window.getComputedStyle(element).color; // rbg값으로 색상 반환
 ```
 * 읽기 전용이기 때문에 style을 변경할 수 없음
 ```javascript
-style.getPropertyValue("color") = rgb(0,0,0); // Uncaught ReferenceError: Invalid left-hand side in assignment
+window.getComputedStyle(element).color = "rgb(0,0,0)"; // Uncaught DOMException: Failed to set the 'color' property on 'CSSStyleDeclaration': These styles are computed, and therefore the 'color' property is read-only.
 ```
