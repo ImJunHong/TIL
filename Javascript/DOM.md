@@ -5,9 +5,9 @@
 const element = document.getElementById("elementId");
 const color = element.style.color;
 ```
-* 새로운 style을 설정할 수 있음
+* style을 변경할 수 있음
 ```javascript
-element.style.color = red;
+element.style.color = "red";
 ```
 * HTML 태그 내에 인라인 방식으로 지정된 CSS 스타일에만 접근할 수 있음
 ```css
@@ -20,4 +20,15 @@ element.style.color = red;
 ```javascript
 const color01 = document.getElementById("elementId01").style.color; // black
 const color02 = document.getElementById("elementId02").style.color; // ""
+```
+
+## window.getComputedStyle(Element);
+* Element에 적용된 모든 CSS 속성 값을 담고 있는 객체를 반환
+```javascript
+const style = window.getComputedStyle(element);
+const color = style.getPropertyValue("color");
+```
+* 읽기 전용이기 때문에 style을 변경할 수 없음
+```javascript
+style.getPropertyValue("color") = rgb(0,0,0); // Uncaught ReferenceError: Invalid left-hand side in assignment
 ```
