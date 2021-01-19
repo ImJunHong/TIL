@@ -33,6 +33,7 @@ window.onload = load;
   * useCapture : true면 캡처링 방식으로, false면 버블링 방식으로 이벤트 전파. 기본값은 false
   * 동일한 이벤트에 대해 여러 개의 리스너를 중복 등록할 수 있음
   * 표준 브라우저(IE9 이상, 파이어폭스, 오페라, 사파리, 크롬)에서 지원
+  * addEventListener() 외 다른 방법으로 이벤트 리스너 등록시 버블 리스너로 등록됨
  
 ```javascript
 const text = document.getElementById("text");
