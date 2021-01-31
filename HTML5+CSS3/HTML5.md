@@ -30,6 +30,23 @@ context.stroke();
 ```
 <img src="https://user-images.githubusercontent.com/67459853/106387862-13918600-641f-11eb-992d-cf82322d3699.PNG">
 
+* 경로를 거치지 않고 캔버스에 직접 그리기
+```javascript
+context.strokeStyle = "red";
+context.fillStyle = "green";
+context.strokeRect(50, 50, 25, 25); // 사각형의 외곽선을 캔버스에 직접 그림
+context.fillRect(100, 50, 25, 25); // 사각형의 내부를 색으로 채워 캔버스에 직접 그림
+
+context.font = "italic 25px arial"; // 폰트 설정
+context.strokeText("abc", 50, 150); // 텍스트의 외곽선을 캔버스에 직접 그림
+context.fillText("가나다", 150, 150); // 텍스트의 내부를 색으로 채워 캔버스에 직접 그림
+```
+<img src="https://user-images.githubusercontent.com/67459853/106388009-e5f90c80-641f-11eb-8f8e-31798e5511e2.PNG">
+
+* 캔버스 지우기
+```javascript
+context.clearRect(0, 0, canvas.width, canvas.height); // 해당 사각형의 범위 안에 있는 그림을 지움
+```
 
 # \<dl\>
 * \<dl\>은 개념-정의를 나타내는 목록
