@@ -30,3 +30,13 @@ d
 counter = Counter(a=3, b=2, c=1, d=0) # 0은 물론 음수까지도 입력이 가능함
 print(counter.most_common()) # [('a', 3), ('b', 2), ('c', 1), ('d', 0)]
 print(counter.most_common(2)) # [('a', 3), ('b', 2)]
+```
+
+## update([iterable-or-mapping])
+* 인자로 받은 iterable이나 mapping의 요소들을 추가함
+* 원래 없는 요소는 추가되고, 원래 있던 요소는 개수를 더함
+```python
+counter = Counter({"a":3, "b":2, "c":1})
+counter.update(a=1, b=-1, c=0, d=4)
+print(counter) # Counter({'a': 4, 'd': 4, 'b': 1, 'c': 1})
+```
