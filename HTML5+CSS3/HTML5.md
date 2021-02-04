@@ -59,3 +59,16 @@ context.clearRect(0, 0, canvas.width, canvas.height); // 해당 사각형의 범
 # \<input type="submit"\>과 \<button\>\</button\> 비교
 * button 태그의 디폴트 type은 submit임. type 속성을 명시하지 않으면 submit 기능을 수행함
 * button은 input과는 달리 \<button\>\</button\> 사이에 컨텐츠를 삽입할 수 있는 등 UI 디자인에서의 활용도가 높음
+
+# \<source\>\</source\>
+* \<audio\>태그나 \<video\>태그 내부에 삽입하여 음성이나 영상 파일을 불러옴
+* \<audio\>, \<video\>태그의 src속성을 생략하고 대신 \<source\>태그의 src속성에 경로를 입력하면 됨
+* 복수의 \<source\>태그를 삽입하면 그 중에서 가장 첫 번째로 브라우저가 지원하는 파일을 재생함
+```html
+<audio controls>
+    <source src="audio01.ogg" type="audio/ogg">
+    <source src="audio01.wav" type="audio/wav">
+    audio 태그를 지원하지 않는 브라우저입니다.
+</audio>
+```
+ 
