@@ -38,7 +38,7 @@ class Decorator:
         self.function(*args, **kwargs)
         # 추가 코드
 ```
-```
+```python
 # 클래스 데코레이터 사용
 @Decorator
 def function(*args, **kwargs):
