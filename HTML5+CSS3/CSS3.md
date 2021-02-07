@@ -27,6 +27,10 @@ border: 10px solid black;
 ```
 <img src="https://user-images.githubusercontent.com/67459853/107148072-9c1aa400-6994-11eb-96c1-1d05eeeb893c.PNG">
 
+# display:none과 visibility:hidden의 차이
+* 둘 다 해당 스타일을 가진 태그를 보이지 않게 함
+* display:none은 공간을 할당하지 않으나, visibility:hidden은 공간을 할당함
+
 # float를 clear시키는 방법
 * float 속성이 있는 블록 요소는 주변의 다른 요소들의 배치에 영향을 미침
 * clear 속성은 float 속성이 다른 요소들의 배치에 영향을 미치지 않도록 해제시키는 역할을 함
@@ -93,6 +97,16 @@ div div {
 * 여러 개의 link를 사용해도 IE에서 동일한 순서로 작동함
 * Edge에서도 처리가 가능한 방식임
 
-# display:none과 visibility:hidden의 차이
-* 둘 다 해당 스타일을 가진 태그를 보이지 않게 함
-* display:none은 공간을 할당하지 않으나, visibility:hidden은 공간을 할당함
+# Vendor Prefix
+* 아직 CSS 표준으로 인정되지 않은 실험적이고 비표준인 속성에 각 브라우저 제작사별로 별개의 접두어를 붙임
+* -webkit- : 웹킷 계열 브라우저(사파리, 크롬)
+* -moz- : 모질라(파이어폭스)
+* -o- : 오페라
+* -ms- : 마이크로소프트(인터넷 익스플로러, 마이크로소프트 엣지)
+* 접두어가 붙은 속성은 해당 버전의 브라우저에서 적용되고 다른 브라우저에서는 무시됨
+* 접두어가 붙은 속성을 모두 작성한 후에 기본속성으로 작성해야만 접두어가 붙은 속성이 정상적으로 적용됨
+```css
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+```
