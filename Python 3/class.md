@@ -1,3 +1,14 @@
+# @classmethod와 @staticmethod
+* 객체를 생성하지 않고 클래스에서 바로 호출함
+
+## @classmethod
+* 첫 번째 매개변수로 클래스의 참조변수(보통 cls)를 받음
+* 참조변수 cls를 통해 메서드 내에서 클래스 변수와 다른 클래스 메서드에 접근할 수 있음(접근할 필요가 있을 때 classmethod 사용)
+
+## @staticmethod
+* @classmethod와 달리 클래스에 대한 참조변수를 매개변수로 받지 않아 인스턴스 속성에 접근할 수 없음(staticmethod 내에서 객체를 생성하면 접근 가능)
+* 매개변수로 받은 변수들만 다루므로 굳이 클래스 내에 선언할 필요는 없지만, 그럼에도 클래스 내부에 같이 묶어두고자 할 때 staticmethod 사용
+
 # object 클래스
 * 모든 클래스는 object 클래스를 상속받음
 * Python 2.2부터 old style class와 new style class를 구분하기 시작함
