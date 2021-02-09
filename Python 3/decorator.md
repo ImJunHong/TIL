@@ -12,7 +12,7 @@ def decorator(function):
         # 추가 코드
     return inner_function
 ```
-```
+```python
 # 함수 데코레이터 사용 1
 decorator(function(*args, **kwargs))
 
