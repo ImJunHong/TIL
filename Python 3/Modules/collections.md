@@ -40,3 +40,27 @@ counter = Counter({"a":3, "b":2, "c":1})
 counter.update(a=1, b=-1, c=0, d=4)
 print(counter) # Counter({'a': 4, 'd': 4, 'b': 1, 'c': 1})
 ```
+
+# collections.defaultdict([default_factory[, key=value, ...]])
+* 기본적으로 dictionary와 같은 기능을 함
+* 존재하지 않는 key에 접근할 때, KeyError가 발생하지 않고 미리 지정한 디폴트 값을 반환함
+* default_factory에 메소드를 인자로 받으며, 존재하지 않는 key에 접근할 때 해당 메소드의 반환값을 반환함
+* default_factory를 생략하면 dictionary와 마찬가지로 KeyError가 발생함
+
+```python
+def function():
+    return "default"
+
+dictionary = {"a":1, "b":2, "c":3}
+defaultdict1 = collections.defaultdict(function, a=1, b=2, c=3)
+defaultdict2 = collections.defaultdict(a=1, b=2, c=3)
+defaultdict3 = collections.defaultdict(int, a=1, b=2, c=3)
+defaultdict4 = collections.defaultdict(list, a=1, b=2, c=3)
+defaultdict5 = collections.defaultdict(dict, a=1, b=2, c=3)
+
+print(dictionary["d"]) # KeyError: 'd'
+print(defaultdict1["d"]) # default
+print(defaultdict2["d"]) # KeyError: 'd'
+print(defaultdict3["d"]) # 0
+print(defaultdict4["d"]) # []
+print(defaultdict5["d"]) # {}
