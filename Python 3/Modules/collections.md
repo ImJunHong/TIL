@@ -64,3 +64,4 @@ print(defaultdict2["d"]) # KeyError: 'd'
 print(defaultdict3["d"]) # 0
 print(defaultdict4["d"]) # []
 print(defaultdict5["d"]) # {}
+```
