@@ -48,6 +48,44 @@ context.fillText("가나다", 150, 150); // 텍스트의 내부를 색으로 채
 context.clearRect(0, 0, canvas.width, canvas.height); // 해당 사각형의 범위 안에 있는 그림을 지움
 ```
 
+* 그라데이션 효과
+```
+// 선형 그라데이션 지정(x1, y1, x2, y2)
+let gradation = context.createLinearGradient(0, 0, 250, 250);
+gradation.addColorStop(0, "red");
+gradation.addColorStop(0.5, "orange");
+gradation.addColorStop(1, "yellow");
+context.fillStyle = gradation;
+context.fillRect(0, 0, 250, 250);
+
+gradation = context.createLinearGradient(250, 125, 500, 125);
+gradation.addColorStop(0, "red");
+gradation.addColorStop(0.5, "orange");
+gradation.addColorStop(1, "yellow");
+context.fillStyle = gradation;
+context.fillRect(250, 0, 500, 250);
+
+// 원형 그라데이션 지정(x1, y1, radius1, x2, y2, radius2)
+gradation = context.createRadialGradient(125, 375, 50, 125, 375, 125);
+gradation.addColorStop(0, "red");
+gradation.addColorStop(0.5, "orange");
+gradation.addColorStop(1, "yellow");
+context.fillStyle = gradation;
+context.beginPath();
+context.arc(125, 375, 125, 0, Math.PI*2);
+context.fill();
+
+gradation = context.createRadialGradient(375, 375, 125, 250, 250, 50);
+gradation.addColorStop(0, "red");
+gradation.addColorStop(0.5, "orange");
+gradation.addColorStop(1, "yellow");
+context.fillStyle = gradation;
+context.beginPath();
+context.arc(375, 375, 125, 0, Math.PI*2);
+context.fill();
+```
+<img src="https://user-images.githubusercontent.com/67459853/107852948-d386c600-6e56-11eb-8c6e-07be06bed9c9.PNG">
+
 # \<dl\>
 * \<dl\>은 개념-정의를 나타내는 목록
 * \<dt\>, \<dd\>를 자식으로 가짐
