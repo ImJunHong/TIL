@@ -49,7 +49,7 @@ context.clearRect(0, 0, canvas.width, canvas.height); // 해당 사각형의 범
 ```
 
 * 그라데이션 효과
-```
+```javascript
 // 선형 그라데이션 지정(x1, y1, x2, y2)
 let gradation = context.createLinearGradient(0, 0, 250, 250);
 gradation.addColorStop(0, "red");
@@ -85,6 +85,17 @@ context.arc(375, 375, 125, 0, Math.PI*2);
 context.fill();
 ```
 <img src="https://user-images.githubusercontent.com/67459853/107852948-d386c600-6e56-11eb-8c6e-07be06bed9c9.PNG">
+
+* 그림자 효과
+```javascript
+context.shadowColor = "black"; // 그림자 색깔 지정
+context.shadowOffsetX = 10; // 그림자의 가로 위치 지정
+context.shadowOffsetY = 10; // 그림자의 세로 위치 지정
+context.shadowBlur = 8; // 그림자의 흐림 정도 지정
+context.fillStyle = "orange";
+context.fillRect(0, 0, 250, 250);
+```
+<img src="https://user-images.githubusercontent.com/67459853/107877571-9ed74500-6f10-11eb-89eb-2f57de754d81.PNG">
 
 # \<dl\>
 * \<dl\>은 개념-정의를 나타내는 목록
