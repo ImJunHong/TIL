@@ -96,3 +96,16 @@ context.fillStyle = "orange";
 context.fillRect(0, 0, 250, 250);
 ```
 <img src="https://user-images.githubusercontent.com/67459853/107877571-9ed74500-6f10-11eb-89eb-2f57de754d81.PNG">
+
+* artTo(x1, y1, x2, y2, radius)
+  * 두 직선 사이의 호를 그릴 때 사용 (두 직선이 평행하지 않아야 함)
+  * 주로 곡선 모서리를 만드는데 활용됨
+  * 경로의 가장 마지막 점(x0, y0)과 (x1, y1)을 잇는 직선, (x1, y1)과 (x2, y2)를 잇는 직선 사이에 내접하는 원을 잇는 모양을 그림
+```javascript
+context.beginPath();
+context.moveTo(150, 150); // 경로의 가장 마지막 점이 존재해야 하므로, moveTo로 x0, y0 지정
+context.arcTo(150, 350, 350, 350, 50);
+context.lineTo(350, 350);
+context.stroke();
+```
+<img src="https://user-images.githubusercontent.com/67459853/107961197-e9c48b80-6fe8-11eb-924a-74cbc2c04a92.PNG">
