@@ -112,7 +112,7 @@ context.stroke();
 
 * quadraticCurveTo(cpx, cpy, x, y)
   * 2차 베지에 곡선을 그릴 때 사용
-  * 현재 경로의 가장 마지막 점이 시작점, (x, y)가 끝점이며, (cpx, cpy)가 조절점임
+  * 현재 경로의 가장 마지막 점이 시작점, (x, y)가 종료점이며, (cpx, cpy)가 조절점임
 ```javascript
 context.lineWidth = 5;
 context.strokeStyle = "black";
@@ -149,7 +149,7 @@ drawPoint(200, 350, "blue"); // 조절점
 
 * bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
   * 3차 베지에 곡선을 그릴 때 사용
-  * 현재 경로의 가장 마지막 점이 시작점, (x, y)가 끝점이며, (cp1x, cp1y)와 (cp2x, cp2y)는 조절점임
+  * 현재 경로의 가장 마지막 점이 시작점, (x, y)가 종료점이며, (cp1x, cp1y)와 (cp2x, cp2y)는 조절점임
 ```javascript
 context.lineWidth = 5;
 context.strokeStyle = "black";
