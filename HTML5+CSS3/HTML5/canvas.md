@@ -114,9 +114,57 @@ context.stroke();
   * 2차 베지에 곡선을 그릴 때 사용
   * 현재 경로의 가장 마지막 점이 시작점, (x, y)가 끝점이며, (cpx, cpy)가 조절점임
 ```javascript
+context.lineWidth = 5;
+context.strokeStyle = "black";
 context.beginPath();
 context.moveTo(150, 150);
 context.quadraticCurveTo(200, 350, 250, 150);
 context.stroke();
+
+// 시작점, 종료점, 조절점 표시를 위한 부분
+function drawLine(x1, y1, x2, y2) {
+    context.lineWidth = 3;
+    context.strokeStyle = "grey";
+    context.beginPath();
+    context.moveTo(x1, y1);
+    context.lineTo(x2, y2);
+    context.stroke();
+}
+
+function drawPoint(x, y, color) {
+    context.beginPath();
+    context.arc(x, y, 5, 0, 2*Math.PI);
+    context.fillStyle = color;
+    context.fill();
+}
+
+drawLine(150, 150, 200, 350);
+drawLine(250, 150, 200, 350);
+drawPoint(150, 150, "red"); // 시작점
+drawPoint(250, 150, "red"); // 종료점
+drawPoint(200, 350, "blue"); // 조절점
 ```
-<img src="https://user-images.githubusercontent.com/67459853/107966230-e502d600-6fee-11eb-98ad-f2ddf210b557.PNG">
+<img src="https://user-images.githubusercontent.com/67459853/108065506-75015800-70a1-11eb-976d-1956ba8b93a4.PNG">
+<img src="https://user-images.githubusercontent.com/67459853/108065509-7599ee80-70a1-11eb-984e-5b85c0e48d8a.PNG">
+
+* bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+  * 3차 베지에 곡선을 그릴 때 사용
+  * 현재 경로의 가장 마지막 점이 시작점, (x, y)가 끝점이며, (cp1x, cp1y)와 (cp2x, cp2y)는 조절점임
+```javascript
+context.lineWidth = 5;
+context.strokeStyle = "black";
+context.beginPath();
+context.moveTo(150, 250);
+context.bezierCurveTo(200, 150, 300, 150, 350, 250);
+context.stroke();
+
+// 시작점, 종료점, 조절점 표시를 위한 부분(drawLine, drawPoint는 위에 quadraticCurveTo 예시에 정의해 놓음)
+drawLine(150, 250, 200, 150);
+drawLine(350, 250, 300, 150);
+drawPoint(150, 250, "red");
+drawPoint(350, 250, "red");
+drawPoint(200, 150, "blue");
+drawPoint(300, 150, "blue");
+```
+<img src="https://user-images.githubusercontent.com/67459853/108065511-76328500-70a1-11eb-8e0a-3b5add82248d.PNG">
+<img src="https://user-images.githubusercontent.com/67459853/108065510-76328500-70a1-11eb-9e8c-0158307999f3.PNG">
