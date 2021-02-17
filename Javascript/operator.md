@@ -15,5 +15,5 @@ null == false // false
 false == undefined // false
 NaN == NaN // false (NaN은 원래 어떤 것과도 일치하지 않음)
 
-// === 연산자 사용시 위의 모든 식에 대해 false 반환
+// == 연산자 대신 === 연산자 사용시 위의 모든 식에 대해 false 반환
 ```
