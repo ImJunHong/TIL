@@ -1,6 +1,6 @@
 # ==와 ===의 차이점
 * ==는 동등 연산자(equality operator)이고, ===는 일치 연산자(strict equality operator / identity operator)임
-* ==는 피연산자의 타입이 다르면 변환하여 값을 비교하고, ===는 타입과 값이 모두 동일한지를 비교함
+* ==는 피연산자의 타입이 다르면 타입을 변환하여 값을 비교하고, ===는 타입과 값이 모두 동일한지를 비교함
 ```javascript
 0 == "" // true
 0 == "0" // true
