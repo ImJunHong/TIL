@@ -16,3 +16,18 @@
 //myGit이라는 이름의 너비 600, 높이 400 픽셀, 크기 변경 가능하고 툴바가 없는 윈도우를 새로 열어 깃허브 웹 페이지 출력
 window.open("https://github.com/ImJunHong", "myGit", "width=600,height=400,resizable=1,toolbar=no");
 ```
+
+# window.requestAnimationFrame(callback)
+* 애니메이션을 구현할 때 사용
+```javascript
+const box = document.getElementById("box");
+let position = 0;
+
+function move() {
+    position += 3;
+    box.style.left = position+"px";
+
+    requestAnimationFrame(move); // window는 전역 객체이기 때문에 생략 가능
+}
+move();
+```
