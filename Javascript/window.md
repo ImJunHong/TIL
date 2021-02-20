@@ -19,6 +19,8 @@ window.open("https://github.com/ImJunHong", "myGit", "width=600,height=400,resiz
 
 # window.requestAnimationFrame(callback)
 * 애니메이션을 구현할 때 사용
+* 1초에 60회 동작함
+* 콜백 리스트의 항목을 정의하는 요청 ID를 반환하며, 이 요청ID를 window.cancelAnimationFrame(requestID)에 전달하여 requstAnimationFrame을 취소할 수 있음
 ```javascript
 const box = document.getElementById("box");
 let position = 0;
