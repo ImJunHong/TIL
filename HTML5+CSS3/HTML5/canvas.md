@@ -182,3 +182,49 @@ context.fillStyle = "blue";
 context.fillRect(50, 50, 100, 100);
 ```
 <img src="https://user-images.githubusercontent.com/67459853/108725263-8cd95000-7569-11eb-83fa-d61b25f05337.PNG">
+
+## save(), restore()
+* 현재 캔버스의 상태를 스택에 저장하고 불러올(push) 수 있음
+```javascript
+context.strokeStyle = "black";
+context.lineWidth = 5;
+context.fillStyle = "green";
+context.fillRect(0, 0, 50, 50);
+context.save();
+
+context.strokeStyle = "red";
+context.lineWidth = 1;
+context.fillStyle = "navy";
+context.fillRect(100, 0, 50, 50);
+
+context.restore();
+context.fillRect(200, 0, 50, 50);
+```
+<img src="https://user-images.githubusercontent.com/67459853/108860252-5d8e1600-7631-11eb-8f0d-afbddfe6c5a7.PNG">
+
+```javascript
+context.fillStyle = "red";
+context.save();
+
+context.fillStyle = "green";
+context.save();
+
+context.fillStyle = "blue";
+context.save();
+
+context.fillStyle = "purple";
+context.fillRect(0, 0, 50, 50);
+
+context.restore();
+context.fillRect(50, 0, 50, 50);
+
+context.restore();
+context.fillRect(100, 0, 50, 50);
+
+context.restore();
+context.fillRect(150, 0, 50, 50);
+
+context.restore();
+context.fillRect(200, 0, 50, 50);
+```
+<img src="https://user-images.githubusercontent.com/67459853/108860771-dee5a880-7631-11eb-8405-ef2cd20f6bd8.PNG">
