@@ -228,3 +228,15 @@ context.restore();
 context.fillRect(200, 0, 50, 50);
 ```
 <img src="https://user-images.githubusercontent.com/67459853/108860771-dee5a880-7631-11eb-8405-ef2cd20f6bd8.PNG">
+
+## translate(x, y)
+* 캔버스의 원점(0, 0)을 x, y만큼 이동시킴
+```javascript
+context.fillStyle = "red";
+context.fillRect(0, 0, 50, 50);
+
+context.translate(50, 50);
+context.fillStyle = "blue";
+context.fillRect(0, 0, 50, 50);
+```
+<img src="https://user-images.githubusercontent.com/67459853/109018009-10767680-76fb-11eb-97d3-3727d93c57ee.PNG">
