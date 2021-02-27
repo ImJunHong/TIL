@@ -240,3 +240,24 @@ context.fillStyle = "blue";
 context.fillRect(0, 0, 50, 50);
 ```
 <img src="https://user-images.githubusercontent.com/67459853/109018009-10767680-76fb-11eb-97d3-3727d93c57ee.PNG">
+
+## rotate(angle)
+* 캔버스를 원점을 기준으로 시계방향으로 회전시킴
+* 회전 기준점은 원점이므로, 기준점을 바꾸고자 한다면 translate(x, y)로 캔버스의 원점을 변경시켜야 함
+```javascript
+context.rotate(Math.PI*0.1);
+context.fillRect(10, 10, 300, 300);
+
+context.rotate(Math.PI*0.1);
+context.fillStyle = "red";
+context.fillRect(10, 10, 300, 300);
+
+context.rotate(Math.PI*0.1);
+context.fillStyle = "green";
+context.fillRect(10, 10, 300, 300);
+
+context.rotate(Math.PI*0.1);
+context.fillStyle = "blue";
+context.fillRect(10, 10, 300, 300);
+```
+<img src="https://user-images.githubusercontent.com/67459853/109390805-051f8700-7957-11eb-9277-f64a48bd7784.PNG">
