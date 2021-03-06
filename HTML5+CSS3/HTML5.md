@@ -24,7 +24,7 @@
 
 # data-\*(사용자 지정 데이터 특성)
 * data-속성으로 HTML에 데이터를 저장할 수 있음
-* JavaScript에서 DOM 객체의 dataset 속성을 통해 사용자 지정 data-속성 값에 접근할 수 있음
+* JavaScript에서 DOM 객체의 <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/DOM.md#elementdataset">dataset</a> 속성을 통해 사용자 지정 data-속성 값에 접근할 수 있음
 ```html
 <div data-color="mistyrose" data-width="100"></div>
 <div data-color="lightgreen" data-width="100"></div>
