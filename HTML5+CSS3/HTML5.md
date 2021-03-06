@@ -21,3 +21,20 @@
     audio 태그를 지원하지 않는 브라우저입니다.
 </audio>
 ```
+
+# data-\*(사용자 지정 데이터 특성)
+* data-속성으로 HTML에 데이터를 저장할 수 있음
+* JavaScript에서 DOM 객체의 dataset 속성을 통해 사용자 지정 data-속성 값에 접근할 수 있음
+```html
+<div data-color="mistyrose" data-width="100"></div>
+<div data-color="lightgreen" data-width="100"></div>
+<div data-color="skyblue" data-width="100"></div>
+```
+```javascript
+const elems = document.getElementsByTagName("div");
+for(let i=0; i<elems.length; i++) {
+    elems[i].style.backgroundColor = elems[i].dataset.color;
+    elems[i].innerHTML = elems[i].style.width = elems[i].dataset.width + "px";
+}
+```
+<img src="https://user-images.githubusercontent.com/67459853/110214372-a1153980-7ee7-11eb-8996-4282d86a0e71.PNG">
