@@ -1,7 +1,7 @@
-# element.dataset
+# Element.dataset
 * 사용자 지정 데이터 속성(data-\*)에 대한 읽기 전용 DOMStringMap 반환
 * 접두사 data-는 삭제되며, dash-style 이름은 camelCase로 변환됨
-* element.dataset.keyname 또는 element.dataset[keyname]으로 사용자 지정 데이터 속성에 접근 가능
+* Element.dataset.keyname 또는 Element.dataset[keyname]으로 사용자 지정 데이터 속성에 접근 가능
 
 # DOM 객체의 CSS3 스타일 프로퍼티 읽기
 ## Element.style
