@@ -1,3 +1,7 @@
+# globalThis
+* ECMAScript 11부터 전역 객체를 가리키는 식별자를 globalThis로 통일함
+* 웹브라우저에서는 window, self, frames로, Web Workers에서는 self로, Node.js에서는 global로 전역 객체를 가리켜왔음
+
 # window.open(URL[, windowName][, feature])
 * URL : 윈도우에 출력할 웹 페이지 주소. 생략시 빈 윈도우 출력(""나 null을 입력해도 동일)
 * windowName : 윈도우 이름 전달
