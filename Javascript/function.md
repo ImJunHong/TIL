@@ -15,7 +15,7 @@ Foo(); // This function is called without new.
 new Foo(); // This function is called with new.
 ```
 
-* constructor 함수를 new 연산자로 호출하지 않았을 때에도 생성자 함수로 호출하기
+* constructor 함수를 new 연산자로 호출하지 않았을 때에도 생성자 함수로서 호출하기
 ```javascript
 function Foo() {
     if (!new.target) {
@@ -25,6 +25,7 @@ function Foo() {
 ```
 * new.target이 지원되지 않는 환경에서의 polyfill
 ```javascript
+// 만약 new 연산자로 호출되지 않았다면 this는 전역 객체를 
 function Foo() {
     if (!(this instanceof Foo)) {
         return new Foo();
