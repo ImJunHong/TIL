@@ -25,7 +25,7 @@ function Foo() {
 ```
 * new.target이 지원되지 않는 환경에서의 polyfill
 ```javascript
-// 만약 new 연산자로 호출되지 않았다면 this는 전역 객체를 
+// 만약 new 연산자로 호출되지 않았다면 this는 전역 객체를 가리킴
 function Foo() {
     if (!(this instanceof Foo)) {
         return new Foo();
