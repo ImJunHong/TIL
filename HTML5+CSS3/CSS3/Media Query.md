@@ -2,9 +2,23 @@
 * 다양한 장치에서 HTML 문서가 적절한 형태를 갖추게 함
 * 반응형 웹을 구현할 수 있음
 * <link> 태그 내에서 media 속성을 통해 입력하거나, CSS에 직접 입력
-* 기본 구문
+* 
+## 기본 구문
 ```css
 @media media-type and (media-feature-rule) {
   /* CSS code */
 }
 ```
+### 미디어 유형
+* all (모든 장치)
+* print (프린터 기기)
+* screen (스크린이 있는 기기)
+* speech (웹 페이지를 읽어주는 스크린 리더)
+
+### 특성
+* width/heihgt (뷰포트 너비/높이)
+* aspect-ratio (뷰포트의 가로세로 비율)
+* device-width/height (장치의 너비/높이)
+* device-aspect-ratio (장치의 가로세로 비율)
+* orientation (장치의 방향)
+* resolution (장치의 해상도)
