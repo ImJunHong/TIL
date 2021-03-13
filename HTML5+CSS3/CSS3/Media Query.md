@@ -16,7 +16,7 @@
 * speech (웹 페이지를 읽어주는 스크린 리더)
 
 ### 특성
-* width/heihgt (뷰포트 너비/높이)
+* width/height (뷰포트 너비/높이)
 * aspect-ratio (뷰포트의 가로세로 비율)
 * device-width/height (장치의 너비/높이)
 * device-aspect-ratio (장치의 가로세로 비율)
