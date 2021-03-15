@@ -10,6 +10,15 @@
 * button 태그의 디폴트 type은 submit임. type 속성을 명시하지 않으면 submit 기능을 수행함
 * button은 input과는 달리 \<button\>\</button\> 사이에 컨텐츠를 삽입할 수 있는 등 UI 디자인에서의 활용도가 높음
 
+# \<meta name="viewport" content="width=device-width, initial-scale=1.0"\>
+* 사용중인 디바이스에 따라 해상도가 바뀌는 반응형 웹을 만들때 사용
+* content 속성
+  * width/height: 화면의 너비/높이
+  * initial-scale: 초기 확대 비율
+  * user-scalable: 확대 및 축소 가능 여부
+  * minimum-scale: 최소 축소 비율
+  * maximum-scale: 최대 축소 비율
+
 # \<source\>\</source\>
 * \<audio\>태그나 \<video\>태그 내부에 삽입하여 음성이나 영상 파일을 불러옴
 * \<audio\>, \<video\>태그의 src속성을 생략하고 대신 \<source\>태그의 src속성에 경로를 입력하면 됨
