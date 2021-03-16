@@ -83,3 +83,15 @@ const obj = {
 }
 obj.printFullName(); // Junhong Lim
 ```
+* printFullName을 메서드가 아닌 일반 함수로서 호출하면 전역 객체를 가리킴
+```javascript
+const obj = {
+    name: "Junhong",
+    surname: "Lim",
+    printFullName() {
+        console.log(this.name + " " + this.surname);
+    }
+}
+const method = obj.printFullName
+method(); // undefined undefined
+```
