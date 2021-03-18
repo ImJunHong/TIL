@@ -95,3 +95,6 @@ const obj = {
 const method = obj.printFullName
 method(); // undefined undefined
 ```
+
+## Functions.prototype.apply/call/bind 메서드에 의한 호출
+* 해당 메서드에 첫 번째 인수로 전달한 객체를 
