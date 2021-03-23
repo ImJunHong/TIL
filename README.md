@@ -18,7 +18,7 @@
 
 ## D - HTML/CSS
 * <a href="https://github.com/ImJunHong/TIL/blob/master/HTML5%2BCSS3/HTML5.md#data-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A7%80%EC%A0%95-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%8A%B9%EC%84%B1">data-\*(사용자 지정 데이터 특성)<a>
-* <a href="display:none과 visibility:hidden의 차이">display:none과 visibility:hidden의 차이</a>
+* <a href="https://github.com/ImJunHong/TIL/blob/master/HTML5%2BCSS3/CSS3/%EA%B8%B0%ED%83%80.md#displaynone%EA%B3%BC-visibilityhidden%EC%9D%98-%EC%B0%A8%EC%9D%B4">display:none과 visibility:hidden의 차이</a>
 * <a href="https://github.com/ImJunHong/TIL/blob/master/HTML5%2BCSS3/HTML5.md#dl">\<dl\>\</dl\></a>
 
 ## D - JavaScript
