@@ -9,11 +9,14 @@ sayHello(); // Hello world
 
 const sqrt = x => Math.sqrt(x); // 매개변수 1개 일 때 소괄호 생략 가능
                                 // Math.sqrt(x)는 값으로 평가될 수 있는 표현식이므로 반환됨
-                                // x => { return Math.sqrt(x); }와 같음
+                                // x => { return Math.sqrt(x); };와 같음
 console.log(sqrt(4)); // 2
 
 const sum = (x, y) => x + y; // 여러 개의 매개변수를 선언할 경우 소괄호 생략 불가
 console.log(sum(1, 2)); // 3
+
+const makeEmptyObject = () => ({}); // 중괄호 생략시에 객체 리터럴을 반환할 때에는 반드시 소괄호로 감싸야 함({function body}와 구분하기 위함)
+                                    // () => { return {}; };와 같음
 
 const factorial = x => {
     let prod = 1;
