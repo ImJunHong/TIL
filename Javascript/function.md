@@ -32,7 +32,7 @@ new sayHello(); // Uncaught TypeError: sayHello is not a constructor
 
 const sum = (x, x) => x + x; // Uncaught SyntaxError: Duplicate parameter name not allowed in this context
 
-const Foo = (function (){
+const Foo = (function () {
     function Foo(num) {
         this.num = num;
     }
