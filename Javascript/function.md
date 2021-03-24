@@ -1,3 +1,51 @@
+# Arrow function(화살표 함수)
+* (params) => {function body} 형태로 사용
+* 소괄호 안에 여러 개의 매개변수를 선언할 수 있고, 매개변수가 단 한 개인 경우 소괄호를 생략할 수 있음
+* 함수 몸체가 하나의 문(statement)으로 구성되어 있다면 중괄호를 생략할 수 있음
+* 중괄호 생략시, 함수 몸체의 문이 표현식(expression)이라면 해당 표현식이 반환됨
+```javascript
+const sayHello = () => console.log("Hello World"); // 매개변수 없음(소괄호 생략 불가)
+sayHello(); // Hello world
+
+const sqrt = x => Math.sqrt(x); // 매개변수 1개 일 때 소괄호 생략 가능
+                                // Math.sqrt(x)는 값으로 평가될 수 있는 표현식이므로 반환됨
+                                // x => { return Math.sqrt(x); }와 같음
+console.log(sqrt(4)); // 2
+
+const sum = (x, y) => x + y; // 여러 개의 매개변수를 선언할 경우 소괄호 생략 불가
+console.log(sum(1, 2)); // 3
+
+const factorial = x => {
+    let prod = 1;
+    for(let i = x; i > 1; i--) prod *= i
+    return prod; // 함수 몸체에 여러 줄을 사용할 때 반환값이 필요할 경우 명시적으로 return문을 작성해야 함
+}
+console.log(factorial(5)); // 120
+```
+## 일반 함수와의 차이점
+* 화살표 함수는 인스턴스를 생성할 수 없음
+* 중복된 매개변수 이름을 선언할 수 없음
+* 화살표 함수 자체의 this, arguments, super, new.target을 갖지 않음
+``` javascript
+const sayHello = () => console.log("Hello World");
+new sayHello(); // Uncaught TypeError: sayHello is not a constructor
+
+const sum = (x, x) => x + x; // Uncaught SyntaxError: Duplicate parameter name not allowed in this context
+
+const Foo = (function (){
+    function Foo(num) {
+        this.num = num;
+    }
+    Foo.prototype.method = function (arr) {
+        return arr.map(item => item % this.num); // 화살표 함수 대신 일반 함수를 사용하면 this는 전역 객체를 가리킴
+    }
+    return Foo;
+}());
+
+const arrow = new Foo(3);
+console.log(arrow.method([1, 2, 3])); // (3) [1, 2, 0]
+```
+
 # new.target
 * constructor인 함수 내부에서 new 연산자로 호출된 함수에서는 함수 자신을 가리킴
 * new 연산자로 호출되지 않고 일반 함수로서 호출되었다면 undefined를 가리킴
