@@ -46,7 +46,7 @@ const Foo = (function () {
 }());
 
 const arrow = new Foo(3);
-console.log(arrow.method([1, 2, 3])); // (3) [1, 2, 0]
+console.log(arrow.method([1, 2, 3])); // [1, 2, 0]
 ```
 
 # new.target
