@@ -5,6 +5,7 @@
 
 ## A - JavaScript
 * <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/event.md#3-dom-%EA%B0%9D%EC%B2%B4%EC%9D%98-addeventlistener-%EB%A9%94%EC%86%8C%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EB%93%B1%EB%A1%9D">addEventListener()</a>
+* <a href="Array.prototype.map(callback(currentValue[, index[, array]])[, thisArg])">Array.prototype.map()</a>
 
 ## B - HTML/CSS
 * <a href="https://github.com/ImJunHong/TIL/blob/master/HTML5%2BCSS3/CSS3/property.md#box-sizing">box-sizing</a>
