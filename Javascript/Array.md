@@ -20,6 +20,22 @@ console.log(["1", "2", "3", "4", "5"].map(parseInt)); // [1, NaN, NaN, NaN, NaN]
 console.log(["1", "2", "3", "4", "5"].map(item => parseInt(item))); // [1, 2, 3, 4, 5]
 ```
 
+# Array.prototype.push(element1[, ...[, elementN]])
+* 원본 배열의 끝에 인수로 전달받은 값들을 추가하고, 추가한 후의 length 프로퍼티 값을 반환함
+```javascript
+const arr = [1, 2, 3];
+console.log(arr.push(4, 5)); // 5
+console.log(arr); // [1, 2, 3, 4, 5]
+```
+* 배열에 요소를 추가하는 방법으로는 arr[index]도 있음
+```javascript
+const arr = [1, 2, 3];
+arr[3] = 4;
+console.log(arr); // [1, 2, 3, 4]
+arr[arr.length] = 5; // arr.push(5)와 동일하나, 이 방법이 속도가 더 빠름
+console.log(arr); // [1, 2, 3, 4, 5]
+```
+
 # javascript의 배열 생성
 * Array() 생성자 함수 또는 배열 리터럴 []을 사용하여 배열을 생성할 수 있음
 * 배열 리터럴도 내부적으로는 Array() 생성자 함수를 사용하므로 기능의 차이는 없음
