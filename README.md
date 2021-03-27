@@ -76,9 +76,9 @@
 * <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/%EB%B3%80%EC%88%98%20%EC%84%A0%EC%96%B8.md#var-let-const-%EB%B9%84%EA%B5%90">var, let, const 비교</a>
 
 ## W - JavaScript
-* <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/DOM.md#windowgetcomputedstyleelement">window.getComputedStyle(Element)</a>
-* <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/window.md#windowopenurl-windowname-feature">window.open(URL[, windowName][, feature])</a>
-* <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/window.md#windowrequestanimationframecallback">window.requestAnimationFrame(callback)</a>
+* <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/DOM.md#windowgetcomputedstyleelement">window.getComputedStyle()</a>
+* <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/window.md#windowopenurl-windowname-feature">window.open()</a>
+* <a href="https://github.com/ImJunHong/TIL/blob/master/Javascript/window.md#windowrequestanimationframecallback">window.requestAnimationFrame()</a>
 
 ## ㄱ - HTML/CSS
 * <a href="https://github.com/ImJunHong/TIL/blob/master/HTML5%2BCSS3/CSS3/%EA%B8%B0%ED%83%80.md#%EA%B8%80%EC%9E%90-%EC%83%9D%EB%9E%B5">글자 생략</a>
